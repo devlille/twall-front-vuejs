@@ -1,0 +1,29 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    height: 300px;
+    background-color: #55acee;
+}
+
+header .logo-devfestlille {
+    color: white;
+    font-size: 40px;
+}
+
+header .logo-devfestlille img {
+    max-width: 100%;
+}
+
+header .logo-twitter {
+    text-align: right;
+}
+
+section.wall {
+    margin-top: -10vh;
+}

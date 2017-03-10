@@ -4,6 +4,7 @@
 
 html, body {
     height: 100%;
+    overflow: hidden;
 }
 
 header {
@@ -69,16 +70,21 @@ header .live .icon {
     min-height: 100%;
 }
 
-.wall .avatar {
+.wall .tweet {
+    margin: 10px 0 10px 0
+}
+
+.wall .tweet .avatar {
     text-align: center;
 }
 
-.wall .content {
+.wall .tweet .content {
     font-weight: bold;
     font-size: 1.5vw;
+    line-height: 1.5;
 }
 
-.wall .user {
+.wall .tweet .user {
     color: rgba(0,0,0,.54);
     font-size: 1vw;
     margin-bottom: 0;

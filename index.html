@@ -5,148 +5,30 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="François GRUCHALA">
+        <meta name="author" content="François GRUCHALA - @FGruchala">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="node_modules/material-design-lite/material.min.css">
         <link rel="stylesheet" href="content/css/styles.css">
 
-        <script src="node_modules/vue/dist/vue.min.js"></script>
+        <script src="node_modules/vue/dist/vue.js"></script>
         <script defer src="node_modules/material-design-lite/material.min.js"></script>
     </head>
     <body>
         <!-- HEADER -->
-        <header>
-            <div class="mdl-grid mdl-grid--no-spacing rubbon">
-                <div class="mdl-cell mdl-cell--7-offset mdl-cell--1-col shape-triangle"></div>
-                <div class="mdl-cell mdl-cell--4-col"></div>
-            </div>
-            <div class="mdl-grid mdl-grid--no-spacing">
-                <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--6-col mdl-cell--middle">
-                    #
-                    <img src="content/img/logo_devfestlille.svg" alt="devfestlille 2017" />
-                </div>
-                <div class="mdl-cell mdl-cell--2-col mdl-cell--middle live">
-                    <span class="icon"></span>
-                    En direct
-                </div>
-            </div>
+        <header id="header">
+            <tw-rubbon></tw-rubbon>
+            <tw-toolbar></tw-toolbar>
         </header> 
 
-        <!-- WALL -->
-        <section class="mdl-grid mdl-grid--no-spacing wall">
+        <!-- WALL OF TWEETS -->
+        <section id="tweets" class="mdl-grid mdl-grid--no-spacing">
             <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col mdl-color--white mdl-shadow--16dp">
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                    </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
-                    </div>
-                </div>
+                <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet">
             </div>
         </section>
-        
-        <!-- FOOTER -->
+
+        <script src="app/layout/header.vue.js"></script>
+        <script src="app/tweets/tweets.vue.js"></script>
     </body>
 </html>

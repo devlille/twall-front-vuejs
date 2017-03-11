@@ -1,3 +1,7 @@
+/*
+ = GLOBAL 
+ */
+
 * {
     font-family: 'Roboto', sans-serif;
 }
@@ -6,6 +10,10 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+
+/*
+ = HEADER 
+ */
 
 header {
     color: white;
@@ -42,7 +50,7 @@ header .live {
     align-items: center;
 }
 
-@keyframes rec {
+@keyframes animated-red-dot {
     0% {
         background-color: #f44336;
     }
@@ -54,37 +62,41 @@ header .live {
     }
 }
 
-header .live .icon {
+header .live .red-dot {
     width: 1vw;
     height: 1vw;
     margin-right: 10px;
     border: 0.5vw solid #ffffff;
     border-radius: 50%;
     background-color: #f44336;
-    animation-name: rec;
+    animation-name: animated-red-dot;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-.wall {
+/*
+ = TWEETS WALL 
+ */
+
+#tweets {
     min-height: 100%;
 }
 
-.wall .tweet {
+#tweets .tweet {
     margin: 10px 0 10px 0
 }
 
-.wall .tweet .avatar {
+#tweets .tweet .avatar {
     text-align: center;
 }
 
-.wall .tweet .content {
+#tweets .tweet .content {
     font-weight: bold;
     font-size: 1.5vw;
     line-height: 1.5;
 }
 
-.wall .tweet .user {
+#tweets .tweet .user {
     color: rgba(0,0,0,.54);
     font-size: 1vw;
     margin-bottom: 0;

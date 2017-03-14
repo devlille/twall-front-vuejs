@@ -4,16 +4,16 @@
     Vue.component('tw-tweet', {
         props: ['tweet'],
         template: `
-                <div class="mdl-grid tweet">
-                    <div class="mdl-cell mdl-cell--1-col mdl-cell--middle avatar">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
+                <div class="mdl-cell mdl-card mdl-shadow--2dp tweet">
+                    <div class="mdl-card__title mdl-card--expand user">
+                        <h2 class="mdl-card__title-text">@FGruchala</h2>
                     </div>
-                    <div class="mdl-cell mdl-cell--11-col">
-                        <p class="content">
-                            played the role of Walter in Breaking Bad. He is also known
-                            for playing Hal in Malcom in the Middle.
-                        </p>
-                        <p class="user">Bryan Cranston</p>
+                    <div class="mdl-card__supporting-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Aenan convallis.
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border time">
+                        2 minutes
                     </div>
                 </div>
                 `
@@ -22,8 +22,7 @@
     new Vue({
         el: '#tweets',
         data: {
-            tweets: [],
-            timeout: null
+            tweets: ['', '', '', '', '', '', '', '', '', '']
         },
         methods: {
             fetchTweets: fetchTweets
@@ -38,15 +37,12 @@
     }
 
     function created() {
-        this.fetchTweets();
-        this.timeout = window.setInterval(this.fetchTweets, 5000);
-        // fetchTweet
-        // setInterval
+        //this.fetchTweets();
+        //timeout = window.setInterval(this.fetchTweets, 5000);
     }
 
     function beforeDestroy() {
-        // clearInterval
-        window.clearInterval(this.timeout);
+        window.clearInterval(timeout);
     }
 
 })();

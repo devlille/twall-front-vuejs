@@ -1,4 +1,20 @@
 /*
+ = ANIMATION
+ */
+
+@keyframes animated-red-dot {
+    0% {
+        background-color: #f44336;
+    }
+    50% {
+        background-color: #ffffff;
+    }
+    100% {
+        background-color: #f44336;
+    }
+}
+
+/*
  = GLOBAL 
  */
 
@@ -15,54 +31,23 @@ html, body {
  = HEADER 
  */
 
-header {
-    color: white;
+#header {
     font-size: 2vw;
     text-transform: uppercase;
-}
-
-header img {
-    max-width: 100%;
-}
-
-header .rubbon {
-    position: absolute;
     background-color: #55acee;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-header .rubbon div {
-    background-color: #1a237e;
-}
-
-header .rubbon .shape-triangle {
-    background-image: url(../img/shape_triangle.svg);
-    background-position: top left;
+    background-image: url(../img/background_toolbar.svg);
+    background-position: top right;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-header .live {
+#header .live {
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
-@keyframes animated-red-dot {
-    0% {
-        background-color: #f44336;
-    }
-    50% {
-        background-color: #ffffff;
-    }
-    100% {
-        background-color: #f44336;
-    }
-}
-
-header .live .red-dot {
+#header .live .red-dot {
     width: 1vw;
     height: 1vw;
     margin-right: 10px;
@@ -79,25 +64,12 @@ header .live .red-dot {
  */
 
 #tweets {
-    min-height: 100%;
+    padding: 20px;
+    background-color: #fafafa;
 }
 
-#tweets .tweet {
-    margin: 10px 0 10px 0
-}
-
-#tweets .tweet .avatar {
-    text-align: center;
-}
-
-#tweets .tweet .content {
-    font-weight: bold;
-    font-size: 1.5vw;
-    line-height: 1.5;
-}
-
-#tweets .tweet .user {
+#tweets .tweet .time {
     color: rgba(0,0,0,.54);
     font-size: 1vw;
-    margin-bottom: 0;
+    text-align: right;
 }

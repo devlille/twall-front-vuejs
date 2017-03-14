@@ -12,20 +12,18 @@
         <link rel="stylesheet" href="content/css/styles.css">
 
         <script src="node_modules/vue/dist/vue.js"></script>
+        <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
         <script defer src="node_modules/material-design-lite/material.min.js"></script>
     </head>
     <body>
         <!-- HEADER -->
-        <header id="header">
-            <tw-rubbon></tw-rubbon>
+        <header id="header" class="mdl-layout__header">
             <tw-toolbar></tw-toolbar>
         </header> 
 
         <!-- WALL OF TWEETS -->
-        <section id="tweets" class="mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--2-offset-desktop mdl-cell--8-col mdl-color--white mdl-shadow--16dp">
-                <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet">
-            </div>
+        <section id="tweets" class="mdl-grid">
+            <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet">
         </section>
 
         <script src="app/layout/header.vue.js"></script>

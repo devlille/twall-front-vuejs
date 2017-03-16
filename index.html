@@ -7,12 +7,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="François GRUCHALA - @FGruchala">
 
+        <link rel="icon" href="content/img/favicon.ico">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="node_modules/material-design-lite/material.min.css">
         <link rel="stylesheet" href="content/css/styles.css">
 
         <script src="node_modules/vue/dist/vue.js"></script>
         <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+        <script src="node_modules/moment/min/moment.min.js"></script>
+        <script src="node_modules/moment/locale/fr.js"></script>
+        <script src="node_modules/moment/min/moment-with-locales.min.js"></script>
         <script defer src="node_modules/material-design-lite/material.min.js"></script>
     </head>
     <body>
@@ -22,8 +26,11 @@
         </header> 
 
         <!-- WALL OF TWEETS -->
-        <section id="tweets" class="mdl-grid">
-            <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet">
+        <section id="tweets">
+            <div class="no-result" v-if="tweets.length===0"></div>
+            <div class="mdl-grid">
+                <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet" v-bind:key="tweet.id"></tw-tweet>
+            </div>
         </section>
 
         <script src="app/layout/header.vue.js"></script>

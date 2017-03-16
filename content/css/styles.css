@@ -1,48 +1,8 @@
-* {
-    font-family: 'Roboto', sans-serif;
-}
+/*
+ = ANIMATION
+ */
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
-header {
-    color: white;
-    font-size: 2vw;
-    text-transform: uppercase;
-}
-
-header img {
-    max-width: 100%;
-}
-
-header .rubbon {
-    position: absolute;
-    background-color: #55acee;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-header .rubbon div {
-    background-color: #1a237e;
-}
-
-header .rubbon .shape-triangle {
-    background-image: url(../img/shape_triangle.svg);
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-header .live {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-@keyframes rec {
+@keyframes animated-red-dot {
     0% {
         background-color: #f44336;
     }
@@ -54,38 +14,96 @@ header .live {
     }
 }
 
-header .live .icon {
+/*
+ = GLOBAL 
+ */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #fafafa;
+    overflow: hidden;
+}
+
+/*
+ = HEADER 
+ */
+
+#header {
+    font-size: 2vw;
+    text-transform: uppercase;
+    background-color: #55acee;
+    background-image: url(../img/background_toolbar.svg);
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#header .live {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#header .live .red-dot {
     width: 1vw;
     height: 1vw;
     margin-right: 10px;
     border: 0.5vw solid #ffffff;
     border-radius: 50%;
     background-color: #f44336;
-    animation-name: rec;
+    animation-name: animated-red-dot;
     animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 
-.wall {
-    min-height: 100%;
+/*
+ = TWEETS WALL 
+ */
+
+#tweets {
+    width: 100%;
+    height: 100%;
 }
 
-.wall .tweet {
-    margin: 10px 0 10px 0
+#tweets > .mdl-grid {
+    padding: 20px;
 }
 
-.wall .tweet .avatar {
+#tweets .tweet .mdl-card__title, #tweets .tweet .mdl-card__actions {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+#tweets .tweet .mdl-card__title {
+  align-items: flex-start;
+}
+
+#tweets .tweet .mdl-card__title > h5 {
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+#tweets .tweet .more-detail {
+    color: rgba(0,0,0,.54);
+    font-size: 1vw;
+}
+
+#tweets .tweet .more-detail .user {
     text-align: center;
 }
 
-.wall .tweet .content {
-    font-weight: bold;
-    font-size: 1.5vw;
-    line-height: 1.5;
+#tweets .tweet .more-detail .time {
+    text-align: right;
 }
 
-.wall .tweet .user {
-    color: rgba(0,0,0,.54);
-    font-size: 1vw;
-    margin-bottom: 0;
+#tweets .no-result {
+    min-width: 100%;
+    min-height: 100%;
+    background-image: url(../img/background_no-result.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 15vh;
 }

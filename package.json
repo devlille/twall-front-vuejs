@@ -1,7 +1,7 @@
 {
-  "name": "vuejs-twall",
+  "name": "twall-front",
   "version": "1.0.0",
-  "description": "Live wall of tweets",
+  "description": "FRONT - Live wall of tweets",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,17 +9,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fgruchala/vuejs-twall.git"
+    "url": "git+https://github.com/fgruchala/twall-front.git"
   },
   "author": "François GRUCHALA <@FGruchala>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fgruchala/vuejs-twall/issues"
+    "url": "https://github.com/fgruchala/twall-front/issues"
   },
-  "homepage": "https://github.com/fgruchala/vuejs-twall#readme",
+  "homepage": "https://github.com/fgruchala/twall-front#readme",
   "dependencies": {
     "material-design-lite": "^1.3.0",
-    "vue": "^2.2.1"
+    "moment": "^2.17.1",
+    "vue": "^2.2.1",
+    "vue-resource": "^1.2.1"
   },
   "devDependencies": {
     "lite-server": "^2.2.2"

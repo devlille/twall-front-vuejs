@@ -1,28 +1,35 @@
 (function() {
     'use strict';
 
+    let timeout;
+
     Vue.component('tw-tweet', {
         props: ['tweet'],
         template: `
-                <div class="mdl-cell mdl-card mdl-shadow--2dp tweet">
-                    <div class="mdl-card__title mdl-card--expand user">
-                        <h2 class="mdl-card__title-text">@FGruchala</h2>
+                <div 
+                    class="mdl-cell mdl-card mdl-shadow--2dp tweet"
+                    v-bind:style="{'background-image':(tweet.extended_entities ? 'url('+tweet.extended_entities.media[0].media_url_https+')' : 'none'), 'background-size':(tweet.extended_entities ? 'cover' : 'inherit')}">
+                    <div class="mdl-card__title mdl-card--expand">
+                        <h5>{{ tweet.text }}</h5>
                     </div>
-                    <div class="mdl-card__supporting-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Aenan convallis.
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border time">
-                        2 minutes
+                    <div class="mdl-card__actions mdl-card--border mdl-grid more-detail">
+                        <span class="mdl-cell mdl-cell--4-col">{{ tweet.retweet_count }} RT</span>
+                        <strong class="mdl-cell mdl-cell--4-col user">@{{ tweet.user.screen_name }}</strong>
+                        <span class="mdl-cell mdl-cell--4-col time">{{ tweet.created_at | tw-clock }}</span>
                     </div>
                 </div>
                 `
     });
 
+    Vue.filter('tw-clock', function (value) {
+        const dateOfTweet = moment(value, "ddd MMM DD HH:mm:ss +ZZ YYYY");
+        return moment().locale("fr").to(dateOfTweet);
+    });
+
     new Vue({
         el: '#tweets',
         data: {
-            tweets: ['', '', '', '', '', '', '', '', '', '']
+            tweets: []
         },
         methods: {
             fetchTweets: fetchTweets
@@ -33,16 +40,18 @@
     });
 
     function fetchTweets() {
-        this.tweets.push('youhou');
+        this.$http
+            .get("http://localhost:3002/api/tweet")
+            .then(res => this.tweets = res.data)
+            .finally(() => timeout = window.setTimeout(this.fetchTweets, 10000));
     }
 
     function created() {
-        //this.fetchTweets();
-        //timeout = window.setInterval(this.fetchTweets, 5000);
+        this.fetchTweets();
     }
 
     function beforeDestroy() {
-        window.clearInterval(timeout);
+        window.clearTimeout(timeout);
     }
 
 })();

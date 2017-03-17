@@ -27,7 +27,6 @@
 
         <!-- WALL OF TWEETS -->
         <section id="tweets">
-            <div class="no-result" v-if="tweets.length===0"></div>
             <div class="mdl-grid">
                 <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet" v-bind:key="tweet.id"></tw-tweet>
             </div>

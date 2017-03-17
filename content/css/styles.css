@@ -98,12 +98,3 @@ html, body {
 #tweets .tweet .more-detail .time {
     text-align: right;
 }
-
-#tweets .no-result {
-    min-width: 100%;
-    min-height: 100%;
-    background-image: url(../img/background_no-result.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 15vh;
-}

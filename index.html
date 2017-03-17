@@ -20,17 +20,20 @@
         <script defer src="node_modules/material-design-lite/material.min.js"></script>
     </head>
     <body>
-        <!-- HEADER -->
-        <header id="header" class="mdl-layout__header">
-            <tw-toolbar></tw-toolbar>
-        </header> 
+        <div class="mdl-layout">
+            <!-- HEADER -->
+            <header id="header" class="mdl-layout__header">
+                <tw-icon></tw-icon>
+                <tw-toolbar></tw-toolbar>
+            </header> 
 
-        <!-- WALL OF TWEETS -->
-        <section id="tweets">
-            <div class="mdl-grid">
-                <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet" v-bind:key="tweet.id"></tw-tweet>
-            </div>
-        </section>
+            <!-- WALL OF TWEETS -->
+            <main id="tweets" class="mdl-layout__content">
+                <div class="mdl-grid">
+                    <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet" v-bind:key="tweet.id"></tw-tweet>
+                </div>
+            </main>
+        </div>
 
         <script src="app/layout/header.vue.js"></script>
         <script src="app/tweets/tweets.vue.js"></script>

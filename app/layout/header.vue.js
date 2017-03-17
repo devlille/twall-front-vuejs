@@ -13,6 +13,12 @@
             `        
     });
 
+    Vue.component('tw-icon', {
+        template: `
+            <img class="mdl-layout-icon"></img>    
+            `
+    });
+
     new Vue({
         el: '#header'
     });

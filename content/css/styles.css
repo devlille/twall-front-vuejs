@@ -75,6 +75,7 @@ html, body {
 
 #tweets .tweet {
     width: 100%;
+    min-height: inherit;
 }
 
 #tweets .tweet + .tweet{

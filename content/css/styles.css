@@ -73,6 +73,14 @@ html, body {
     padding: 20px;
 }
 
+#tweets .tweet {
+    width: 100%;
+}
+
+#tweets .tweet + .tweet{
+    margin-top: 16px;
+}
+
 #tweets .tweet .mdl-card__title, #tweets .tweet .mdl-card__actions {
     background-color: rgba(255, 255, 255, 0.85);
 }

@@ -64,9 +64,13 @@ html, body {
  = TWEETS WALL 
  */
 
-#tweets {
+#tweets .tweet {
     width: 100%;
-    height: 100%;
+    min-height: inherit;
+}
+
+#tweets .tweet + .tweet{
+    margin-top: 16px;
 }
 
 #tweets .tweet .mdl-card__title, #tweets .tweet .mdl-card__actions {

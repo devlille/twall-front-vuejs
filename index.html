@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="node_modules/material-design-lite/material.min.css">
         <link rel="stylesheet" href="content/css/styles.css">
 
-        <script src="node_modules/vue/dist/vue.min.js"></script>
+        <script src="node_modules/vue/dist/vue.js"></script>
         <script src="node_modules/vue-resource/dist/vue-resource.min.js"></script>
         <script src="node_modules/moment/min/moment.min.js"></script>
         <script src="node_modules/moment/locale/fr.js"></script>
@@ -30,11 +30,13 @@
             <!-- WALL OF TWEETS -->
             <main id="tweets" class="mdl-layout__content">
                 <div class="mdl-grid">
-                    <tw-tweet v-for="tweet in tweets" v-bind:tweet="tweet" v-bind:key="tweet.id"></tw-tweet>
+                    <div class="mdl-cell mdl-cell-4--col" v-for="col in tweets">
+                        <tw-tweet v-for="tweet in col" v-bind:tweet="tweet" v-bind:key="tweet.id"></tw-tweet>
+                    </div>
                 </div>
             </main>
         </div>
-
+        
         <script src="app/layout/header.vue.js"></script>
         <script src="app/tweets/tweets.vue.js"></script>
     </body>

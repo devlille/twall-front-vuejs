@@ -7,7 +7,7 @@
         props: ['tweet'],
         template: `
                 <div 
-                    class="mdl-cell mdl-card mdl-shadow--2dp tweet"
+                    class="mdl-card mdl-shadow--2dp tweet"
                     v-bind:style="{'background-image':(tweet.extended_entities ? 'url('+tweet.extended_entities.media[0].media_url_https+')' : 'none'), 'background-size':(tweet.extended_entities ? 'cover' : 'inherit')}">
                     <div class="mdl-card__title mdl-card--expand">
                         <h5>{{ tweet.text }}</h5>
@@ -42,7 +42,18 @@
     function fetchTweets() {
         this.$http
             .get("http://localhost:3002/api/tweet")
-            .then(res => this.tweets = res.data)
+            .then(res => {
+                this.tweets = [];
+                this.tweets.push([], [], []);
+
+                for(let idx=0; idx<res.data.length; idx++) {
+                    this.tweets[idx%3].push(res.data[idx]);
+                }
+
+                for(let idx=0; idx<res.data.length; idx++) {
+                    this.tweets[idx%3].push(res.data[idx]);
+                }
+            })
             .finally(() => timeout = window.setTimeout(this.fetchTweets, 10000));
     }
 

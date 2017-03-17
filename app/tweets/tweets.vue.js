@@ -49,10 +49,6 @@
                 for(let idx=0; idx<res.data.length; idx++) {
                     this.tweets[idx%3].push(res.data[idx]);
                 }
-
-                for(let idx=0; idx<res.data.length; idx++) {
-                    this.tweets[idx%3].push(res.data[idx]);
-                }
             })
             .finally(() => timeout = window.setTimeout(this.fetchTweets, 10000));
     }

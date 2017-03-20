@@ -32,6 +32,10 @@ html, body {
  = HEADER 
  */
 
+#header .mdl-layout-icon {
+    width: auto;
+}
+
 #header .mdl-layout__header-row {
     font-size: 2vw;
     text-transform: uppercase;

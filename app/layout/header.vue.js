@@ -15,7 +15,7 @@
 
     Vue.component('tw-icon', {
         template: `
-            <img class="mdl-layout-icon"></img>    
+            <img class="mdl-layout-icon" src="content/img/logo_devfestlille.png"></img>    
             `
     });
 

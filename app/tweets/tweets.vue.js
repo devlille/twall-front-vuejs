@@ -7,8 +7,7 @@
         props: ['tweet'],
         template: `
                 <div 
-                    class="mdl-card mdl-shadow--2dp tweet"
-                    v-bind:style="{'background-image':(tweet.extended_entities ? 'url('+tweet.extended_entities.media[0].media_url_https+')' : 'none'), 'background-size':(tweet.extended_entities ? 'cover' : 'inherit')}">
+                    class="mdl-card mdl-shadow--2dp tweet">
                     <div class="mdl-card__title mdl-card--expand">
                         <h5>{{ tweet.text }}</h5>
                     </div>

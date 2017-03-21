@@ -13,6 +13,12 @@
             `        
     });
 
+    Vue.component('tw-icon', {
+        template: `
+            <img class="mdl-layout-icon" src="content/img/logo_devfestlille.png"></img>    
+            `
+    });
+
     new Vue({
         el: '#header'
     });

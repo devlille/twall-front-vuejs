@@ -17,5 +17,4 @@ Live wall of tweets for the #devfestlille 2017
 ### Via GitHub > [Issues](https://github.com/fgruchala/twall-front/issues)
 Helpful for **question**, **bug** and **contribution request**.
 
-### Via Twitter
-* François GRUCHALA [@FGruchala](https://twitter.com/FGruchala)
+### Via Twitter > François GRUCHALA [@FGruchala](https://twitter.com/FGruchala)

@@ -2,6 +2,8 @@
 
 Live wall of tweets for the #devfestlille 2017
 
+To combine with either [Twall - MIDDLE - ExpressJS](https://github.com/fgruchala/twall-middle-expressjs) or [Twall - MIDDLE - Go](https://github.com/fgruchala/twall-middle-go)
+
 ## Made with ...
 * Love
 * [NPM](https://www.npmjs.com/) 

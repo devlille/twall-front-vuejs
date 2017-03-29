@@ -21,7 +21,7 @@
     });
 
     Vue.filter('tw-clock', function (value) {
-        const dateOfTweet = moment(value, "ddd MMM DD HH:mm:ss +ZZ YYYY");
+        const dateOfTweet = moment(value, "ddd MMM DD HH:mm:ss ZZ YYYY");
         return moment().locale("fr").to(dateOfTweet);
     });
 
